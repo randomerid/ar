@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ar. Radhi Dinata, IAI — Principal Architect & Building Design Studio</title>
+  <meta name="description" content="Layanan perancangan arsitektur personal oleh Ar. Radhi Dinata, ST., IAI, AA. Membantu Anda merancang rumah tinggal tropis modern, villa privat, ruang komersial, dan renovasi impian.">
+  <meta name="keywords" content="arsitek rumah, jasa arsitek, arsitek indonesia, desain rumah tropis modern, arsitek villa, konsultasi desain bangunan, IAI architect, residential architecture, building design">
+  <meta property="og:title" content="Ar. Radhi Dinata, IAI — Architectural Studio & Spatial Design">
+  <meta property="og:description" content="Mewujudkan ruang hidup bernyawa dan berkelanjutan. Dilengkapi kalkulator kebutuhan bangunan interaktif dan asisten konsultasi AI Arsitek.">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span class="top-bar-badge" data-i18n="topBarBadge">🏛️ Arsitek Anggota IAI & ASEAN Architect</span>
+      <span class="top-bar-text" data-i18n="topBarText">Menerima Konsultasi Perancangan Hunian Tropis, Villa, & Komersial Periode 2026/2027</span>
+      <div class="lang-switch-wrapper">
+        <span class="lang-label" data-i18n="langLabel">Bahasa:</span>
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="id" id="btnLangId">
+            <span class="flag">🇮🇩</span> <span class="lang-code">ID</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="en" id="btnLangEn">
+            <span class="flag">🇬🇧</span> <span class="lang-code">EN</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Radhi Dinata Architect Homepage">
+        <div class="logo-symbol">
+          <span class="logo-draft">📐</span>
+        </div>
+        <div class="brand-text">
+          <span class="logo-title">RADHI DINATA<span class="dot">.</span></span>
+          <span class="logo-subtitle" data-i18n="logoSub">Architect & Spatial Design Studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-item active" data-i18n="navHome">Beranda</a>
+        <a href="#about" class="nav-item" data-i18n="navAbout">Profil Arsitek</a>
+        <a href="#design-helper" class="nav-item" data-i18n="navCalculator">Kalkulator Desain</a>
+        <a href="#portfolio" class="nav-item" data-i18n="navPortfolio">Portofolio Karya</a>
+        <a href="#services" class="nav-item" data-i18n="navServices">Layanan</a>
+        <a href="#process" class="nav-item" data-i18n="navProcess">Alur Kerja</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-secondary nav-chat-trigger" id="navChatTrigger" aria-label="Konsultasi dengan AI Arsitek">
+          <span class="icon">🤖</span>
+          <span data-i18n="navAskAI">Konsultasi AI Arsitek</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigasi menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pill-spark">🌿</span>
+          <span class="pill-text" data-i18n="heroPill">Arsitektur Tropis Berkelanjutan & Biophilic Living</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span data-i18n="heroTitlePart1">Mewujudkan Ruang Hidup Bernyawa &</span>
+          <span class="gradient-text" data-i18n="heroTitleHighlight">Arsitektur Berkelanjutan</span>
+        </h1>
+        
+        <p class="hero-description" data-i18n="heroDesc">
+          Saya Ar. Radhi Dinata, ST., IAI. Bersama studio kami, kami mendampingi Anda merancang bangunan impian—mulai dari hunian pribadi yang sejuk alami, villa peristirahatan bernuansa alam, hingga ruang komersial yang berkarakter kuat dan efisien biaya.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#design-helper" class="btn btn-primary btn-lg" id="btnExplore">
+            <span class="btn-text" data-i18n="heroBtnExplore">Rancang Kebutuhan Bangunan Anda</span>
+            <span class="btn-icon">→</span>
+          </a>
+          <button type="button" class="btn btn-glass btn-lg" id="btnHeroChat">
+            <span class="btn-icon">💬</span>
+            <span class="btn-text" data-i18n="heroBtnChat">Konsultasi AI Arsitek (24/7)</span>
+          </button>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-number">12+</span>
+            <span class="stat-label" data-i18n="statExp">Tahun Praktik Desain</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number">68+</span>
+            <span class="stat-label" data-i18n="statProjects">Karya Bangunan Terbangun</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label" data-i18n="statCustom">Kustom Sesuai Anggaran</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number">4</span>
+            <span class="stat-label" data-i18n="statAwards">Penghargaan Arsitektur</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-visual">
+        <div class="visual-card-wrapper">
+          <div class="hero-main-img-container" id="heroImgContainer">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="The Omah Semilir Courtyard House" class="hero-main-img" id="heroMainImg">
+            <div class="img-gradient-overlay"></div>
+            
+            <!-- Carousel Nav Arrows -->
+            <button type="button" class="hero-carousel-nav hero-nav-prev" id="heroNavPrev" aria-label="Proyek sebelumnya">‹</button>
+            <button type="button" class="hero-carousel-nav hero-nav-next" id="heroNavNext" aria-label="Proyek berikutnya">›</button>
+
+            <!-- Carousel Slide Indicators -->
+            <div class="hero-carousel-indicators" id="heroIndicators" role="tablist" aria-label="Indikator Pilihan Proyek Unggulan">
+              <button type="button" class="hero-dot active" data-slide="0" aria-label="Pilih Proyek 1"></button>
+              <button type="button" class="hero-dot" data-slide="1" aria-label="Pilih Proyek 2"></button>
+              <button type="button" class="hero-dot" data-slide="2" aria-label="Pilih Proyek 3"></button>
+              <button type="button" class="hero-dot" data-slide="3" aria-label="Pilih Proyek 4"></button>
+            </div>
+
+            <div class="floating-badge badge-top-right" id="heroBadgeTop">
+              <span class="badge-icon" id="heroBadgeTopIcon">🏆</span>
+              <div>
+                <strong id="heroBadgeTopTitle" data-i18n="badgeAwardTitle">IAI Design Excellence</strong>
+                <p id="heroBadgeTopSub" data-i18n="badgeAwardSub">Kategori Hunian Tropis Berkelanjutan</p>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left" id="heroBadgeBottom">
+              <span class="badge-icon" id="heroBadgeBottomIcon">🍃</span>
+              <div>
+                <strong id="heroBadgeBottomTitle" data-i18n="badgeHeritageTitle">Bioclimatic Passive Cooling</strong>
+                <p id="heroBadgeBottomSub" data-i18n="badgeHeritageSub">Ventilasi Silang & Bukaan Cahaya Terukur</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini interactive project preview snippet -->
+          <div class="hero-dish-preview" id="heroDishPreview">
+            <div class="preview-header">
+              <span class="preview-tag" id="previewTag" data-i18n="previewTag">Karya Pilihan Unggulan</span>
+              <span class="preview-spice" id="heroPreviewSpice">🏡 Modern Tropical Courtyard</span>
+            </div>
+            <div class="preview-body">
+              <h4 id="previewDishTitle">The Omah Semilir Residence</h4>
+              <p id="previewDishDesc" data-i18n="previewProjectBrief">Hunian tropis 2 lantai dengan inner courtyard terbuka, kisi-kisi kayu jati daur ulang, dan beton ekspos yang memaksimalkan sirkulasi udara alami tanpa boros energi.</p>
+            </div>
+            <div class="preview-footer">
+              <span class="preview-origin" id="heroPreviewOrigin">📍 Sentul, Jawa Barat</span>
+              <button type="button" class="btn-text-link" id="btnPreviewDetails" data-project-id="omah-semilir" data-i18n="viewDetails">Lihat Detail & Gambar Kerja →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Architect & Core Philosophy -->
+  <section class="values-section" id="about">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag" data-i18n="valuesTag">Filosofi Desain</span>
+        <h2 class="section-title" data-i18n="valuesTitle">Membangun Bukan Sekadar Mendirikan Dinding, Tapi Menganyam Kehidupan</h2>
+        <p class="section-subtitle" data-i18n="valuesSub">
+          Setiap proyek arsitektur bermula dari mendengar: bagaimana kebiasaan harian Anda, karakter tanah tempat berpijak, serta arah pergerakan matahari dan angin. Inilah 4 prinsip utama di setiap karya studio kami.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">☀️</div>
+          <h3 class="value-title" data-i18n="val1Title">Respon Iklim & Hemat Energi</h3>
+          <p class="value-desc" data-i18n="val1Desc">Penerapan teritisan lebar, orientasi massa bangunan menghindari panas barat, dan ventilasi silang yang membuat hunian 3-4°C lebih sejuk secara alami.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🪵</div>
+          <h3 class="value-title" data-i18n="val2Title">Kejujuran Material Alami</h3>
+          <p class="value-desc" data-i18n="val2Desc">Memadukan keelokan kayu jati lestari, batu alam andesit, bata terakota bernafas, dan beton ekspos yang menua dengan anggun tanpa biaya perawatan rumit.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🪴</div>
+          <h3 class="value-title" data-i18n="val3Title">Integrasi Ruang Luar & Dalam</h3>
+          <p class="value-desc" data-i18n="val3Desc">Inner courtyard, taman saku, dan bukaan kaca besar menghubungkan penghuni dengan alam hijau, suara gemercik air, dan langit terbuka dari setiap sudut ruangan.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">📐</div>
+          <h3 class="value-title" data-i18n="val4Title">Presisi Struktur & Disiplin Anggaran</h3>
+          <p class="value-desc" data-i18n="val4Desc">Setiap garis gambar kerja (DED) dihitung cermat bersama insinyur struktur dan diselaraskan dengan Rencana Anggaran Biaya (RAB) transparan sejak awal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Building Design Needs Helper & Calculator -->
+  <section class="design-helper-section" id="design-helper">
+    <div class="container">
+      <div class="helper-banner">
+        <div class="helper-header">
+          <span class="section-tag" data-i18n="helperTag">Alat Interaktif Klien</span>
+          <h2 class="helper-title" data-i18n="helperTitle">Bantu Rancang Kebutuhan Bangunan Anda</h2>
+          <p class="helper-subtitle" data-i18n="helperSub">
+            Gunakan kalkulator interaktif ini untuk memetakan kebutuhan ruang, estimasi luasan, gaya arsitektur, dan rekomendasi bujet sebelum memulai konsultasi resmi.
+          </p>
+        </div>
+
+        <div class="helper-grid">
+          <!-- Controls Form -->
+          <div class="helper-form-card">
+            <div class="form-step">
+              <label class="step-label" data-i18n="step1Label">1. Pilih Tipologi Bangunan:</label>
+              <div class="chip-select-group" id="typologySelectGroup">
+                <button type="button" class="helper-chip active" data-type="residential" data-i18n="typeRes">🏡 Rumah Tinggal Pribadi</button>
+                <button type="button" class="helper-chip" data-type="villa" data-i18n="typeVilla">🌴 Villa / Resort Komersial</button>
+                <button type="button" class="helper-chip" data-type="commercial" data-i18n="typeCafe">☕ Cafe & Restoran / Retail</button>
+                <button type="button" class="helper-chip" data-type="office" data-i18n="typeOffice">🏢 Studio Kantor Kreatif</button>
+                <button type="button" class="helper-chip" data-type="renovation" data-i18n="typeReno">🔨 Renovasi Fasad & Ruang</button>
+              </div>
+            </div>
+
+            <div class="form-step">
+              <label class="step-label" data-i18n="step2Label">2. Luas Lahan / Tanah Anda:</label>
+              <div class="slider-wrapper">
+                <div class="slider-header">
+                  <span data-i18n="landAreaLabel">Luas Lahan:</span>
+                  <strong id="landAreaDisplay" class="accent-number">180 m²</strong>
+                </div>
+                <input type="range" id="landAreaSlider" min="60" max="1500" step="10" value="180" class="custom-slider">
+                <div class="slider-scale">
+                  <span>60 m² (Kompak)</span>
+                  <span>300 m² (Sedang)</span>
+                  <span>750 m² (Luas)</span>
+                  <span>1500+ m²</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-step">
+              <label class="step-label" data-i18n="step3Label">3. Gaya Arsitektur yang Diinginkan:</label>
+              <div class="chip-select-group" id="styleSelectGroup">
+                <button type="button" class="helper-chip active" data-style="modern-tropical" data-i18n="styleTrop">🌿 Modern Tropis</button>
+                <button type="button" class="helper-chip" data-style="japandi" data-i18n="styleJap">🎋 Japandi & Minimalis Hangat</button>
+                <button type="button" class="helper-chip" data-style="brutalist" data-i18n="styleBrut">🧱 Brutalis & Beton Ekspos</button>
+                <button type="button" class="helper-chip" data-style="sustainable" data-i18n="styleEco">🍃 Biophilic & Bambu/Kayu</button>
+                <button type="button" class="helper-chip" data-style="contemporary" data-i18n="styleCont">🏛️ Kontemporer Elegan</button>
+              </div>
+            </div>
+
+            <div class="form-step">
+              <label class="step-label" data-i18n="step4Label">4. Fitur Ruang Tambahan (Pilih yang Diinginkan):</label>
+              <div class="feature-checkboxes" id="featuresGroup">
+                <label class="feature-checkbox">
+                  <input type="checkbox" value="courtyard" checked>
+                  <span class="chk-box"></span>
+                  <span class="chk-text" data-i18n="chkCourtyard">Taman Dalam (Inner Courtyard)</span>
+                </label>
+                <label class="feature-checkbox">
+                  <input type="checkbox" value="pool">
+                  <span class="chk-box"></span>
+                  <span class="chk-text" data-i18n="chkPool">Kolam Renang / Kolam Refleksi</span>
+                </label>
+                <label class="feature-checkbox">
+                  <input type="checkbox" value="rooftop">
+                  <span class="chk-box"></span>
+                  <span class="chk-text" data-i18n="chkRooftop">Rooftop Garden / Sky Terrace</span>
+                </label>
+                <label class="feature-checkbox">
+                  <input type="checkbox" value="homeoffice" checked>
+                  <span class="chk-box"></span>
+                  <span class="chk-text" data-i18n="chkOffice">Studio / Ruang Kerja Terpisah</span>
+                </label>
+                <label class="feature-checkbox">
+                  <input type="checkbox" value="void" checked>
+                  <span class="chk-box"></span>
+                  <span class="chk-text" data-i18n="chkVoid">High Ceiling Void (Plafon Tinggi)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Output / Recommendation Card -->
+          <div class="helper-result-card" id="helperResultCard">
+            <div class="result-header">
+              <span class="result-badge" data-i18n="resultBadge">💡 Rangkuman Rekomendasi Desain</span>
+              <h3 id="resultProjectTitle">Hunian Tropis Modern 2 Lantai</h3>
+            </div>
+
+            <div class="result-specs-grid">
+              <div class="res-spec-item">
+                <span class="res-spec-label" data-i18n="resGfaLabel">Luas Bangunan Ideal (GFA)</span>
+                <strong class="res-spec-val" id="resGfa">~216 m² (2 Lantai)</strong>
+              </div>
+              <div class="res-spec-item">
+                <span class="res-spec-label" data-i18n="resKdbLabel">Koefisien Dasar Bangunan (KDB)</span>
+                <strong class="res-spec-val" id="resKdb">60% Lahan (Taman 40%)</strong>
+              </div>
+              <div class="res-spec-item">
+                <span class="res-spec-label" data-i18n="resBudgetLabel">Rentang Estimasi Bangun</span>
+                <strong class="res-spec-val highlight" id="resBudget">Rp 6 - 8,5 Jt / m²</strong>
+              </div>
+              <div class="res-spec-item">
+                <span class="res-spec-label" data-i18n="resTimeLabel">Estimasi Pengerjaan Desain</span>
+                <strong class="res-spec-val" id="resTimeline">6 - 8 Minggu (Konsep s/d DED)</strong>
+              </div>
+            </div>
+
+            <div class="result-analysis">
+              <h4 data-i18n="resStrategyTitle">Strategi Arsitektur yang Disarankan:</h4>
+              <p id="resStrategyDesc">
+                Memaksimalkan bukaan ventilasi silang dengan memposisikan taman samping atau inner courtyard sebagai paru-paru rumah. Menggunakan kisi-kisi penangkal panas matahari barat (secondary skin) dan atap miring berventilasi udara untuk membuang hawa panas secara alami.
+              </p>
+            </div>
+
+            <div class="result-cta-box">
+              <p class="cta-note" data-i18n="resCtaNote">Ingin mendiskusikan angka ini atau mengirimkan denah lahan Anda untuk dibedah langsung?</p>
+              <div class="result-btns">
+                <button type="button" class="btn btn-primary" id="btnSendPlanToAI">
+                  <span class="icon">💬</span>
+                  <span data-i18n="btnConsultThisPlan">Bahas Rencana Ini dengan AI Arsitek</span>
+                </button>
+                <button type="button" class="btn btn-secondary" id="btnCopyPlanSummary">
+                  <span class="icon">📋</span>
+                  <span data-i18n="btnCopySummary">Salin Ringkasan</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Portfolio Showcase Section -->
+  <section class="recs-section" id="portfolio">
+    <div class="container">
+      <div class="section-heading">
+        <div class="heading-left">
+          <span class="section-tag" data-i18n="recsTag">Portofolio Desain Terpilih</span>
+          <h2 class="section-title" data-i18n="recsTitle">Eksplorasi Karya Arsitektur & Spasial</h2>
+          <p class="section-subtitle" data-i18n="recsSub">
+            Kumpulan proyek yang telah terbangun dan konsep spasial yang menggabungkan keindahan estetika, kenyamanan termal, dan ketahanan jangka panjang.
+          </p>
+        </div>
+        <div class="recs-counter-badge" id="recsCountBadge">
+          <span class="badge-num" id="foodCountNum">12</span>
+          <span class="badge-text" data-i18n="dishesFound">Karya Arsitektur Ditampilkan</span>
+        </div>
+      </div>
+
+      <!-- Search & Filters Container -->
+      <div class="filter-controls-card">
+        <div class="search-bar-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="foodSearchInput" class="search-input" placeholder="Cari nama proyek, gaya, lokasi, atau material (contoh: Villa, Beton, Bali, Kayu Jati, Courtyard)..." data-i18n-placeholder="searchPlaceholder">
+          <button type="button" class="search-clear" id="searchClearBtn" aria-label="Bersihkan pencarian" style="display: none;">✕</button>
+        </div>
+
+        <div class="filter-categories-row">
+          <span class="filter-label" data-i18n="filterTasteLabel">Tipologi Bangunan:</span>
+          <div class="category-pills" id="categoryPills">
+            <button class="pill-btn active" data-category="all" data-i18n="catAll">Semua Tipologi</button>
+            <button class="pill-btn" data-category="residential" data-i18n="catResidential">🏡 Hunian Pribadi</button>
+            <button class="pill-btn" data-category="villa" data-i18n="catVilla">🌴 Villa & Resort</button>
+            <button class="pill-btn" data-category="commercial" data-i18n="catCommercial">☕ Cafe & Komersial</button>
+            <button class="pill-btn" data-category="renovation" data-i18n="catRenovation">🔨 Renovasi & Interior</button>
+          </div>
+        </div>
+
+        <div class="filter-regions-row">
+          <span class="filter-label" data-i18n="filterRegionLabel">Gaya & Pendekatan:</span>
+          <div class="region-pills" id="regionPills">
+            <button class="region-btn active" data-region="all" data-i18n="regAll">Semua Gaya</button>
+            <button class="region-btn" data-region="modern-tropical" data-i18n="regTrop">Modern Tropis</button>
+            <button class="region-btn" data-region="japandi" data-i18n="regJap">Japandi & Minimalis</button>
+            <button class="region-btn" data-region="brutalist" data-i18n="regBrut">Beton & Brutalis</button>
+            <button class="region-btn" data-region="sustainable" data-i18n="regEco">Biophilic & Ramah Lingkungan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="food-grid" id="foodGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">🏛️</div>
+        <h3 class="empty-title" data-i18n="emptyTitle">Karya Tidak Ditemukan</h3>
+        <p class="empty-desc" data-i18n="emptyDesc">Coba kata kunci pencarian lain atau klik tombol di bawah untuk mereset seluruh filter portofolio.</p>
+        <button type="button" class="btn btn-secondary" id="btnResetFilters" data-i18n="emptyBtnReset">Reset Semua Filter</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architectural Services -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag" data-i18n="servicesTag">Layanan Profesional</span>
+        <h2 class="section-title" data-i18n="servicesTitle">Bagaimana Studio Kami Membantu Mewujudkan Kebutuhan Anda</h2>
+        <p class="section-subtitle" data-i18n="servicesSub">
+          Pendekatan menyeluruh dari tahap konsep ide, gambar perizinan PBG, hingga pengawasan pembangunan fisik di lapangan.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-badge">01</div>
+          <h3 class="service-title" data-i18n="srv1Title">Desain Arsitektur Terpadu (Full Architectural Design)</h3>
+          <p class="service-desc" data-i18n="srv1Desc">
+            Paket lengkap mencakup studi kelayakan tapak, denah tata ruang fungsional, 3D visualisasi photorealistic, gambar kerja Detail Engineering Design (DED), perhitungan struktur tahan gempa, dan berkas perizinan PBG/IMB.
+          </p>
+          <ul class="service-features">
+            <li>✓ Konsep Skematik & Analisis Arah Matahari</li>
+            <li>✓ Animasi Ruang & Render 3D Realistis 4K</li>
+            <li>✓ Berkas Lengkap Gambar Kerja Arsitektur & Struktur</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-badge">02</div>
+          <h3 class="service-title" data-i18n="srv2Title">Desain Interior & Custom Built-In Furniture</h3>
+          <p class="service-desc" data-i18n="srv2Desc">
+            Menyelaraskan arsitektur luar dengan kenyamanan ruang dalam. Perancangan skema pencahayaan (lighting design), pemilihan material finishing, sirkulasi perabot, dan gambar kerja custom cabinetry yang presisi.
+          </p>
+          <ul class="service-features">
+            <li>✓ Moodboard Material & Skema Warna Harmonis</li>
+            <li>✓ Desain Pencahayaan Arsitektural (Mood Lighting)</li>
+            <li>✓ Detail Pertukangan & Kitchen Set Custom</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-badge">03</div>
+          <h3 class="service-title" data-i18n="srv3Title">Renovasi & Transformasi Fasad Bangunan</h3>
+          <p class="service-desc" data-i18n="srv3Desc">
+            Menghidupkan kembali bangunan eksisting tanpa harus merobohkan keseluruhan struktur. Optimalisasi tata cahaya, peremajaan fasad modern tropis, dan penataan ulang sekat ruang agar lebih lapang dan bernapas.
+          </p>
+          <ul class="service-features">
+            <li>✓ Audit Struktur Eksisting & Potensi Ruang</li>
+            <li>✓ Transformasi Fasad Hemat Biaya dengan Secondary Skin</li>
+            <li>✓ Pembongkaran Sekat Efisien untuk Open-Plan Space</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-badge">04</div>
+          <h3 class="service-title" data-i18n="srv4Title">Pengawasan Berkala & Manajemen Anggaran (RAB)</h3>
+          <p class="service-desc" data-i18n="srv4Desc">
+            Memastikan apa yang digambar di atas kertas terwujud akurat di lapangan. Kami menyusun RAB rinci dan melakukan inspeksi konstruksi berkala untuk menjaga kualitas material dan ketepatan detail.
+          </p>
+          <ul class="service-features">
+            <li>✓ Penyusunan Bill of Quantities (BoQ) & RAB Transparan</li>
+            <li>✓ Pendampingan Tender Seleksi Kontraktor Terpercaya</li>
+            <li>✓ Supervisi Berkala di Lokasi Proyek Konstruksi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step-by-Step Design Workflow Process -->
+  <section class="regions-section" id="process">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag" data-i18n="regionsTag">Alur Kolaborasi Desain</span>
+        <h2 class="section-title" data-i18n="regionsTitle">4 Tahap Menyenangkan Menuju Bangunan Impian Anda</h2>
+        <p class="section-subtitle" data-i18n="regionsSub">
+          Kami mengutamakan transparansi dan komunikasi cair di setiap fase. Anda akan selalu dilibatkan dalam pengambilan keputusan desain.
+        </p>
+      </div>
+
+      <div class="regions-tabs-wrapper">
+        <div class="regions-nav-tabs" id="regionNavTabs">
+          <button class="region-tab active" data-reg-tab="phase1">
+            <span class="tab-badge">01</span>
+            <div>
+              <strong data-i18n="regTabSumatraTitle">Tahap 1: Wawancara & Analisis Tapak</strong>
+              <small data-i18n="regTabSumatraSub">Eksplorasi Gaya Hidup & Orientasi Lahan</small>
+            </div>
+          </button>
+
+          <button class="region-tab" data-reg-tab="phase2">
+            <span class="tab-badge">02</span>
+            <div>
+              <strong data-i18n="regTabJavaTitle">Tahap 2: Konsep Skematik & 3D Visual</strong>
+              <small data-i18n="regTabJavaSub">Denah Ruang, Moodboard & Model 3D</small>
+            </div>
+          </button>
+
+          <button class="region-tab" data-reg-tab="phase3">
+            <span class="tab-badge">03</span>
+            <div>
+              <strong data-i18n="regTabBaliTitle">Tahap 3: Gambar Kerja (DED) & RAB</strong>
+              <small data-i18n="regTabBaliSub">Detail Teknis, Struktur & Anggaran Rinci</small>
+            </div>
+          </button>
+
+          <button class="region-tab" data-reg-tab="phase4">
+            <span class="tab-badge">04</span>
+            <div>
+              <strong data-i18n="regTabSulawesiTitle">Tahap 4: Pelaksanaan & Pengawasan Lapangan</strong>
+              <small data-i18n="regTabSulawesiSub">Seleksi Kontraktor & Supervisi Berkala</small>
+            </div>
+          </button>
+        </div>
+
+        <div class="region-tab-content" id="regionTabContent">
+          <!-- Dynamically filled by app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Design Knowledge & Essential Guides -->
+  <section class="guide-section" id="client-guide">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag" data-i18n="guideTag">Wawasan Membangun</span>
+        <h2 class="section-title" data-i18n="guideTitle">Tips Penting Sebelum Anda Mulai Membangun</h2>
+        <p class="section-subtitle" data-i18n="guideSub">
+          Panduan praktis dari arsitek untuk menghindari pembengkakan biaya, kesalahan zonasi ruang, dan masalah kenyamanan suhu bangunan.
+        </p>
+      </div>
+
+      <div class="guide-cards-grid">
+        <!-- Card 1: Budget Strategy -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <span class="guide-icon">💰</span>
+            <div>
+              <h3 class="guide-title" data-i18n="guide1Title">Manajemen Bujet & Alokasi RAB</h3>
+              <span class="guide-subtitle" data-i18n="guide1Sub">Kunci Menghindari Proyek Mangkrak</span>
+            </div>
+          </div>
+          <ul class="guide-list">
+            <li>
+              <strong data-i18n="guide1Point1Head">Rasio 50-30-20:</strong>
+              <span data-i18n="guide1Point1Body"> Alokasikan ~50% untuk struktur & dinding, ~30% untuk finishing arsitektur & sanitair, dan 20% untuk MEP serta dana cadangan (contingency).</span>
+            </li>
+            <li>
+              <strong data-i18n="guide1Point2Head">Pentingnya DED Lengkap:</strong>
+              <span data-i18n="guide1Point2Body"> Jangan memulai konstruksi tanpa Detail Engineering Design. Ketidakjelasan gambar kerja adalah penyebab utama biaya bengkak di tengah jalan.</span>
+            </li>
+            <li>
+              <strong data-i18n="guide1Point3Head">Prioritas Material Kunci:</strong>
+              <span data-i18n="guide1Point3Body"> Investasikan lebih pada waterproofing, rangka atap, pipa, dan kusen kedap air. Material estetika dekoratif selalu bisa ditingkatkan kemudian.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Climate & Orientation Guide -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <span class="guide-icon">🧭</span>
+            <div>
+              <h3 class="guide-title" data-i18n="guide2Title">Orientasi Bangunan & Bukaan Udara</h3>
+              <span class="guide-subtitle" data-i18n="guide2Sub">Rumah Sejuk Tanpa Ketergantungan AC</span>
+            </div>
+          </div>
+          <div class="sambal-meter-list">
+            <div class="sambal-item">
+              <div class="sambal-item-top">
+                <strong>Hadap Utara - Selatan</strong>
+                <span class="heat-pill mild">Paling Ideal ☀️</span>
+              </div>
+              <p data-i18n="orientIdealDesc">Bukaan jendela besar sebaiknya menghadap utara atau selatan untuk menangkap cahaya terang alami tanpa radiasi panas terik langsung.</p>
+            </div>
+
+            <div class="sambal-item">
+              <div class="sambal-item-top">
+                <strong>Dinding Hadap Barat</strong>
+                <span class="heat-pill hot">Area Panas ⚠️</span>
+              </div>
+              <p data-i18n="orientWestDesc">Sinar matahari sore membawa panas tinggi. Lindungi dengan dinding masif tanpa bukaan besar, taman vertikal, atau secondary skin kisi-kisi.</p>
+            </div>
+
+            <div class="sambal-item">
+              <div class="sambal-item-top">
+                <strong>Ventilasi Silang (Cross Ventilation)</strong>
+                <span class="heat-pill medium">Efektif 🍃</span>
+              </div>
+              <p data-i18n="crossVentDesc">Sediakan bukaan masuk dan bukaan keluar udara di dua sisi berbeda dengan elevasi bertingkat agar udara segar selalu bersirkulasi.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Permits & Zoning -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <span class="guide-icon">📑</span>
+            <div>
+              <h3 class="guide-title" data-i18n="guide3Title">Kamus Singkat Regulasi Lahan</h3>
+              <span class="guide-subtitle" data-i18n="guide3Sub">Istilah Kunci Perizinan PBG & Zonasi</span>
+            </div>
+          </div>
+          <div class="vocab-grid">
+            <div class="vocab-pill">
+              <span class="vocab-term">KDB</span>
+              <span class="vocab-def" data-i18n="vocabKdb">Koefisien Dasar Bangunan (Max luas tapak lantai dasar)</span>
+            </div>
+            <div class="vocab-pill">
+              <span class="vocab-term">KLB</span>
+              <span class="vocab-def" data-i18n="vocabKlb">Koefisien Lantai Bangunan (Total seluruh lantai)</span>
+            </div>
+            <div class="vocab-pill">
+              <span class="vocab-term">GSB</span>
+              <span class="vocab-def" data-i18n="vocabGsb">Garis Sempadan Bangunan (Batas terluar ke jalan)</span>
+            </div>
+            <div class="vocab-pill">
+              <span class="vocab-term">KDH</span>
+              <span class="vocab-def" data-i18n="vocabKdh">Koefisien Daerah Hijau (Min area resapan air)</span>
+            </div>
+            <div class="vocab-pill">
+              <span class="vocab-term">PBG</span>
+              <span class="vocab-def" data-i18n="vocabPbg">Persetujuan Bangunan Gedung (Pengganti IMB resmi)</span>
+            </div>
+            <div class="vocab-pill">
+              <span class="vocab-term">DED</span>
+              <span class="vocab-def" data-i18n="vocabDed">Detail Engineering Design (Gambar kerja acuan tukang)</span>
+            </div>
+          </div>
+          <div class="guide-helper-tip">
+            <span class="tip-icon">💡</span>
+            <span data-i18n="vocabTip">Tips: Seluruh klien studio kami mendapatkan pendampingan penuh untuk pengurusan kelengkapan berkas teknis PBG!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Details Modal -->
+  <div class="modal-backdrop" id="dishModalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup jendela rincian">✕</button>
+      <div class="modal-content" id="modalDynamicContent">
+        <!-- Filled dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot Floating Widget: ArchiAI Assistant -->
+  <div class="chatbot-container" id="chatbotContainer">
+    <!-- Floating Toggle Button -->
+    <button type="button" class="chat-launcher-btn" id="chatLauncherBtn" aria-label="Buka Chatbot AI Arsitek">
+      <div class="launcher-avatar">
+        <span class="launcher-icon">🏛️</span>
+        <span class="online-indicator"></span>
+      </div>
+      <div class="launcher-text">
+        <strong data-i18n="chatLauncherTitle">Konsultasi AI Arsitek</strong>
+        <span data-i18n="chatLauncherSub">Ar. Radhi Dinata Studio 24/7</span>
+      </div>
+    </button>
+
+    <!-- Chat Window Popup -->
+    <div class="chat-window" id="chatWindow" aria-hidden="true">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="header-avatar">
+            <span>📐</span>
+            <span class="online-dot"></span>
+          </div>
+          <div>
+            <h4 class="chat-bot-name">ArchiAI — Studio Radhi Dinata</h4>
+            <p class="chat-bot-status" data-i18n="chatStatusText">Konsultan Desain & Analisis Spasial Arsitektur</p>
+          </div>
+        </div>
+
+        <div class="chat-header-actions">
+          <button type="button" class="btn-chat-action" id="chatResetBtn" title="Reset percakapan" aria-label="Reset chat">🔄</button>
+          <button type="button" class="btn-chat-action" id="chatCloseBtn" title="Tutup chat" aria-label="Tutup chat">✕</button>
+        </div>
+      </div>
+
+      <!-- Quick Prompt Suggestion Chips -->
+      <div class="chat-quick-chips" id="chatQuickChips">
+        <button type="button" class="chip-item" data-prompt="Berapa perkiraan bujet bangun per meter persegi untuk rumah 2 lantai modern tropis di Indonesia?">
+          💰 <span data-i18n="chipBudget">Estimasi Bujet Bangun</span>
+        </button>
+        <button type="button" class="chip-item" data-prompt="Bagaimana cara mengatur ventilasi silang dan inner courtyard agar rumah tidak terasa panas dan pengap?">
+          🍃 <span data-i18n="chipVentilation">Rumah Sejuk & Alami</span>
+        </button>
+        <button type="button" class="chip-item" data-prompt="Saya punya lahan lebar 8m x panjang 15m. Apa zonasi ruang terbaik untuk rumah keluarga dengan 3 kamar tidur?">
+          📐 <span data-i18n="chipFloorPlan">Ide Tata Ruang Tanah</span>
+        </button>
+        <button type="button" class="chip-item" data-prompt="Apa keunggulan gaya Modern Tropis dibandingkan gaya Japandi atau Industrial untuk iklim tropis Indonesia?">
+          🏛️ <span data-i18n="chipStyles">Perbandingan Gaya</span>
+        </button>
+      </div>
+
+      <!-- Messages Body -->
+      <div class="chat-messages" id="chatMessages">
+        <div class="message-row bot-row">
+          <div class="msg-avatar">📐</div>
+          <div class="msg-bubble">
+            <p data-i18n="chatGreeting">
+              Halo! Selamat datang di studio personal <strong>Ar. Radhi Dinata, IAI</strong>. Saya asisten AI arsitektur Anda. Apakah Anda sedang merencanakan membangun rumah, mencari ide tata ruang lahan, ingin menghitung estimasi bujet, atau butuh bantuan menganalisis sketsa denah? Silakan tanyakan apa saja atau unggah foto/gambar denah Anda!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Preview Row if user attaches an image/sketch -->
+      <div class="chat-attachment-preview" id="chatAttachmentPreview" style="display: none;">
+        <img src="" alt="Lampiran Sketsa / Denah" id="attachmentPreviewImg">
+        <div class="attachment-info">
+          <span id="attachmentFileName">sketsa-lahan.jpg</span>
+          <button type="button" class="btn-remove-attachment" id="btnRemoveAttachment" aria-label="Hapus gambar">✕</button>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <form class="chat-input-bar" id="chatForm">
+        <input type="file" id="chatFileInput" accept="image/*,application/pdf" style="display: none;">
+        <button type="button" class="btn-upload-file" id="btnAttachFile" title="Unggah sketsa tanah, denah, atau foto referensi bangunan" aria-label="Lampirkan sketsa atau foto">
+          📷
+        </button>
+        <input type="text" id="chatPromptInput" class="chat-prompt-input" placeholder="Tanyakan seputar desain arsitektur, bujet, denah..." data-i18n-placeholder="chatInputPlaceholder" autocomplete="off">
+        <button type="submit" class="btn-send-message" id="btnSendChat" aria-label="Kirim Pesan">
+          <span>➤</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <span class="logo-symbol">📐</span>
+          <span class="logo-title">RADHI DINATA<span class="dot">.</span></span>
+        </div>
+        <p class="footer-tagline" data-i18n="footerTagline">
+          Studio arsitektur personal berdedikasi menciptakan ruang hidup yang selaras dengan alam tropis, mengoptimalkan pencahayaan dan sirkulasi alami, serta mewujudkan visi hunian impian Anda secara berkesinambungan.
+        </p>
+        <div class="footer-lang-pills">
+          <button type="button" class="btn-footer-lang active" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+          <button type="button" class="btn-footer-lang" data-lang="en">🇬🇧 English</button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footNavTitle">Navigasi Utama</h4>
+        <ul class="footer-nav">
+          <li><a href="#hero" data-i18n="navHome">Beranda</a></li>
+          <li><a href="#about" data-i18n="navAbout">Profil Arsitek</a></li>
+          <li><a href="#design-helper" data-i18n="navCalculator">Kalkulator Desain</a></li>
+          <li><a href="#portfolio" data-i18n="navPortfolio">Portofolio Karya</a></li>
+          <li><a href="#services" data-i18n="navServices">Layanan Arsitektur</a></li>
+          <li><a href="#process" data-i18n="navProcess">Alur Kerja</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footIconsTitle">Karya Unggulan</h4>
+        <ul class="footer-nav">
+          <li><a href="javascript:void(0)" class="quick-dish-link" data-project-id="omah-semilir">The Omah Semilir House</a></li>
+          <li><a href="javascript:void(0)" class="quick-dish-link" data-project-id="bale-wening">Bale Wening Sanctuary Ubud</a></li>
+          <li><a href="javascript:void(0)" class="quick-dish-link" data-project-id="kasama-roastery">Kasama Artisan Roastery</a></li>
+          <li><a href="javascript:void(0)" class="quick-dish-link" data-project-id="terra-sancta">Terra Sancta Cliff Pavilion</a></li>
+          <li><a href="javascript:void(0)" class="quick-dish-link" data-project-id="selaras-angin">Rumah Selaras Angin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footAITitle">Konsultasi Desain & Kontak</h4>
+        <p class="footer-text-small" data-i18n="footAIDesc">
+          Terbuka untuk konsultasi proyek residensial, villa, dan renovasi. Didukung asisten AI arsitek 24 jam untuk membedah ide awal kebutuhan Anda.
+        </p>
+        <button type="button" class="btn btn-secondary btn-sm" id="btnFooterOpenChat" data-i18n="footAIBtn">
+          Mulai Percakapan AI Arsitek
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Ar. Radhi Dinata, ST., IAI, AA. All Rights Reserved.</p>
+        <p class="footer-credit" data-i18n="footerCredit">Dirancang dengan dedikasi untuk keindahan arsitektur tropis nusantara & kenyamanan hidup manusia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
